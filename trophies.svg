@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+    <defs>
+        <style>
+            @keyframes pop { 0% { transform: scale(0.5); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+            @keyframes sweep { 0% { transform: translateX(-100%); } 100% { transform: translateX(200%); } }
+            .bg { fill: #0d1117; stroke: #30363d; stroke-width: 1px; rx: 8px; }
+            .title { fill: #c9d1d9; font-family: sans-serif; font-size: 16px; font-weight: bold; }
+            .trophy-box { fill: #161b22; stroke: #30363d; stroke-width: 1px; rx: 8px; }
+            .shine { fill: rgba(255,255,255,0.1); animation: sweep 3s infinite; }
+        </style>
+        <clipPath id="shineClip1"><rect x="20" y="50" width="100" height="120" rx="8" /></clipPath>
+        <clipPath id="shineClip2"><rect x="140" y="50" width="100" height="120" rx="8" /></clipPath>
+        <clipPath id="shineClip3"><rect x="260" y="50" width="100" height="120" rx="8" /></clipPath>
+    </defs>
+    <rect width="100%" height="100%" class="bg" />
+    <text x="20" y="30" class="title">Trophies</text>
+    
+    <!-- Trophy 1 -->
+    <g style="animation: pop 0.5s forwards;">
+        <rect x="20" y="50" width="100" height="120" class="trophy-box" />
+        <text x="70" y="100" font-size="40" text-anchor="middle">🔥</text>
+        <text x="70" y="140" fill="#8b949e" font-family="sans-serif" font-size="12" text-anchor="middle">Super Coder</text>
+        <rect x="-100" y="50" width="50" height="120" class="shine" clip-path="url(#shineClip1)" />
+    </g>
+    <!-- Trophy 2 -->
+    <g style="animation: pop 0.7s forwards;">
+        <rect x="140" y="50" width="100" height="120" class="trophy-box" />
+        <text x="190" y="100" font-size="40" text-anchor="middle">⭐</text>
+        <text x="190" y="140" fill="#8b949e" font-family="sans-serif" font-size="12" text-anchor="middle">Star Earner</text>
+        <rect x="-100" y="50" width="50" height="120" class="shine" clip-path="url(#shineClip2)" style="animation-delay: 0.5s;" />
+    </g>
+    <!-- Trophy 3 -->
+    <g style="animation: pop 0.9s forwards;">
+        <rect x="260" y="50" width="100" height="120" class="trophy-box" />
+        <text x="310" y="100" font-size="40" text-anchor="middle">🚀</text>
+        <text x="310" y="140" fill="#8b949e" font-family="sans-serif" font-size="12" text-anchor="middle">Fast Deploy</text>
+        <rect x="-100" y="50" width="50" height="120" class="shine" clip-path="url(#shineClip3)" style="animation-delay: 1.0s;" />
+    </g>
+</svg>
