@@ -1,39 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
-    <defs>
-        <style>
-            @keyframes slideIn { 0% { transform: translateX(-20px); opacity: 0; } 100% { transform: translateX(0); opacity: 1; } }
-            @keyframes fillRing { 0% { stroke-dasharray: 0 1000; } 100% { stroke-dasharray: 300 1000; } }
-            .bg { fill: #0d1117; stroke: #30363d; stroke-width: 1px; rx: 8px; }
-            .title { fill: #c9d1d9; font-family: sans-serif; font-size: 16px; font-weight: bold; }
-            .text { fill: #8b949e; font-family: sans-serif; font-size: 14px; }
-            .val { fill: #ff7eb3; font-family: sans-serif; font-size: 14px; font-weight: bold; }
-            .row { animation: slideIn 0.5s ease forwards; opacity: 0; }
-        </style>
-    </defs>
-    <rect width="100%" height="100%" class="bg" />
-    <text x="20" y="30" class="title">GitHub Stats</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 220" width="100%" height="100%">
+    <style>
+        .bg { fill: #161b22; stroke: #4d3472; stroke-width: 1px; rx: 8px; }
+        .title { fill: #ff7eb3; font-family: -apple-system, sans-serif; font-size: 14px; font-weight: bold; }
+        .text { fill: #fff; font-family: -apple-system, sans-serif; font-size: 12px; font-weight: 500; }
+        .val { fill: #fff; font-family: -apple-system, sans-serif; font-size: 12px; font-weight: bold; }
+        .ring { fill: none; stroke: #b266ff; stroke-width: 8; stroke-linecap: round; stroke-dasharray: 200 1000; }
+        .ring-bg { fill: none; stroke: #30363d; stroke-width: 8; }
+        .rank { fill: #ff7eb3; font-family: -apple-system, sans-serif; font-size: 28px; font-weight: bold; text-anchor: middle; }
+        @keyframes fillRing { from { stroke-dasharray: 0 1000; } to { stroke-dasharray: 200 1000; } }
+        .animate-ring { animation: fillRing 1.5s ease forwards; transform: rotate(-90deg); transform-origin: center; }
+    </style>
+    <rect width="450" height="220" class="bg" />
+    <text x="20" y="30" class="title">🌸 Shiza Ahsan's GitHub Stats</text>
     
-    <g transform="translate(20, 60)" class="row" style="animation-delay: 0.2s">
-        <text x="0" y="0" class="text">Total Stars Earned:</text>
-        <text x="150" y="0" class="val">42</text>
-    </g>
-    <g transform="translate(20, 90)" class="row" style="animation-delay: 0.4s">
-        <text x="0" y="0" class="text">Total Commits:</text>
-        <text x="150" y="0" class="val">1,337</text>
-    </g>
-    <g transform="translate(20, 120)" class="row" style="animation-delay: 0.6s">
-        <text x="0" y="0" class="text">Total PRs:</text>
-        <text x="150" y="0" class="val">88</text>
-    </g>
-    <g transform="translate(20, 150)" class="row" style="animation-delay: 0.8s">
-        <text x="0" y="0" class="text">Total Issues:</text>
-        <text x="150" y="0" class="val">12</text>
+    <g transform="translate(30, 70)">
+        <text x="0" y="0" class="text">⭐ Total Stars Earned:</text>
+        <text x="200" y="0" class="val">50+</text>
+        
+        <text x="0" y="30" class="text">✅ Total Commits:</text>
+        <text x="200" y="30" class="val">1000+</text>
+        
+        <text x="0" y="60" class="text">🚀 Public Repos:</text>
+        <text x="200" y="60" class="val">14+</text>
+        
+        <text x="0" y="90" class="text">👥 Followers:</text>
+        <text x="200" y="90" class="val">25+</text>
+        
+        <text x="0" y="120" class="text">🔥 Action Gits Rolls:</text>
+        <text x="200" y="120" class="val">4</text>
     </g>
     
-    <!-- Rank Ring -->
-    <circle cx="300" cy="100" r="45" fill="none" stroke="#30363d" stroke-width="8" />
-    <circle cx="300" cy="100" r="45" fill="none" stroke="#8a2be2" stroke-width="8" stroke-dasharray="0 1000" transform="rotate(-90 300 100)">
-        <animate attributeName="stroke-dasharray" values="0 1000; 250 1000" dur="1.5s" fill="freeze" />
-    </circle>
-    <text x="300" y="105" fill="#fff" font-family="sans-serif" font-size="24" font-weight="bold" text-anchor="middle">S+</text>
+    <g transform="translate(350, 120)">
+        <circle cx="0" cy="0" r="45" class="ring-bg" />
+        <circle cx="0" cy="0" r="45" class="ring animate-ring" />
+        <text x="0" y="10" class="rank">A</text>
+    </g>
 </svg>
